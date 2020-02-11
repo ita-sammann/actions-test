@@ -1,6 +1,6 @@
-name: Push action
+name: PR action
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
@@ -11,8 +11,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Print some info
       run: |
+        echo type: ${{ github.event.pull_request.type }}
         echo GITHUB_SHA: $GITHUB_SHA,
         echo GITHUB_REF: $GITHUB_REF,
+        echo
         echo file1:
         cat file1.txt
         echo
