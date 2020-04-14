@@ -15,4 +15,12 @@ jobs:
         echo GITHUB_REF: $GITHUB_REF,
         echo
         ls -laFh
+    - name: step 1
+      run: echo "step 1"; false
+    - name: step 2
+      run: echo "step 2"; false
+    - name: step 3
+      run: echo "step 3"; false
+    - name: step 4
+      run: echo "step 4"; false
 
