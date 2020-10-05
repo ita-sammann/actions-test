@@ -31,6 +31,6 @@ jobs:
         echo "GITHUB_SHA: $GITHUB_SHA" >nonce.txt
         echo "GITHUB_REF: $GITHUB_REF" >>nonce.txt
     - name: Upload artifact
-      uses: actions/upload_artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: nonce-file
