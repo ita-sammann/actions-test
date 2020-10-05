@@ -1,0 +1,21 @@
+name: windows-checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  win-net-test:
+    runs-on: windows-latest
+    steps:
+      - run: |
+          echo "netsh int ipv4 show dynamicport tcp"
+          netsh int ipv4 show dynamicport tcp
+          echo "netsh int ipv4 show dynamicport udp"
+          netsh int ipv4 show dynamicport udp
+          echo ""
+          echo "netsh int ipv4 set dynamicport tcp start=51000 num=14000"
+          netsh int ipv4 set dynamicport tcp start=51000 num=14000
+          echo "netsh int ipv4 set dynamicport udp start=51000 num=14000"
+          netsh int ipv4 set dynamicport udp start=51000 num=14000
+          echo ""
+          echo "netsh int ipv4 show dynamicport tcp"
+          netsh int ipv4 show dynamicport tcp
+          echo "netsh int ipv4 show dynamicport udp"
+          netsh int ipv4 show dynamicport udp
