@@ -9,12 +9,12 @@ jobs:
           netsh int ipv4 show dynamicport tcp
           echo "netsh int ipv4 show dynamicport udp"
           netsh int ipv4 show dynamicport udp
-          echo
+          echo ""
           echo "netsh int ipv4 set dynamicport tcp start=33000 num=16384"
           netsh int ipv4 set dynamicport tcp start=33000 num=16384
           echo "netsh int ipv4 set dynamicport udp start=33000 num=16384"
           netsh int ipv4 set dynamicport udp start=33000 num=16384
-          echo
+          echo ""
           echo "netsh int ipv4 show dynamicport tcp"
           netsh int ipv4 show dynamicport tcp
           echo "netsh int ipv4 show dynamicport udp"
