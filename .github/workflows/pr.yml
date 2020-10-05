@@ -14,9 +14,9 @@ jobs:
       run: echo "stub" >nonce.txt
     - name: Upload empty artifact
       uses: actions/upload-artifact@v2
-        with:
-          name: nonce-file
-          path: nonce.txt
+      with:
+        name: nonce-file
+        path: nonce.txt
     - name: rm nonce.txt
       run: rm nonce.txt
     - name: Download artifact
